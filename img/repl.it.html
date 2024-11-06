@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://127.0.0.1:5500/Incrementor/index.html -->
+<html id="HTML"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./repl.it_files/css2" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="./repl.it_files/style.css" rel="stylesheet" type="text/css">
+    <script defer="" src="./repl.it_files/script.js.download"></script>
+  </head>
+  <body>
+    <h1>Incrementing Variables &amp; Random Values</h1>
+    <hr>
+
+    <!-- Numbers Area -->
+    <h2>Incrementing Numbers</h2>
+    <p id="display">0</p>
+    <p>
+      <button id="minus50">-50</button>
+      <button id="minus10">-10</button>
+      <button id="minus1">-1</button>
+
+      <button id="plus1">+1</button>
+      <button id="plus10">+10</button>
+      <button id="plus50">+50</button>
+    </p>
+
+    <!-- String Area -->
+    <hr>
+    <h2>Incrementing Strings</h2>
+    <p>Type a word into the box and hit enter to add it to the sentence.</p>
+
+    <p><input id="strIn"></p>
+
+    <p id="strOut">Once upon a time,</p>
+
+    <hr>
+
+    <h2>Random Values</h2>
+    <p>Math.random() produces are random decimal number from 0 to 0.999...</p>
+    <p>
+      <button id="rand1">Random 0 - 1</button>:
+      <span id="rand1-out">----------</span>
+    </p>
+
+    <p>
+      <button id="rand2">Random 0 - 100</button>:
+      <span id="rand2-out">----------</span>
+    </p>
+
+    <p>
+      <button id="rand3">Random -5 to 5</button>:
+      <span id="rand3-out">----------</span>
+    </p>
+    <p>
+      <button id="rand4">
+        Random <input id="rand-in1" type="number"> to
+        <input id="rand-in2" type="number"></button>: <span id="rand4-out">----------</span>
+    </p>
+
+    <hr>
+    <p>
+      <button id="random-size">RANDOM SIZE</button>
+      <button id="random-rgb">RANDOM COLOR</button>
+      <button id="reset">RESET PAGE</button>
+    </p>
+
+    <hr>
+
+    <p><button id="pic-btn">Add Pic</button></p>
+    <div id="pic-container"></div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
